@@ -1,0 +1,61 @@
+p {
+  font-size: 30px;
+  color: aqua;
+  animation: animationTitle 5s infinite;
+  margin-bottom: 20px;
+}
+.padder_top80 {
+  margin-top: 20px;
+}
+.w_top_song .w_tp_song_img {
+  width: 320px;
+}
+.w_top_song {
+  display: flex;
+}
+.listVung {
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal-body{
+  text-align: center;
+}
+.addHouse {
+  position: absolute;
+  top: 97px;
+  right: 20px;
+  transition: all 0.4s;
+  position: fixed;
+}
+@media (max-width: 1200px) {
+  .w_top_song .w_tp_song_img {
+    width: 200px;
+  }
+}
+@media (max-width: 991px) {
+  .addHouse {
+    top: 62px;
+    right: 20px;
+  }
+}
+@media (min-width:992px) and (max-width:1120px){
+  .col-lg-4 {
+    max-width: 42.333333%;
+}
+}
+@media (max-width: 600px) {
+  p{
+    font-size: 20px;
+  }
+ div.btn.btn-primary.addHouse > span{
+   display: none;
+ }
+ .addHouse{
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+}

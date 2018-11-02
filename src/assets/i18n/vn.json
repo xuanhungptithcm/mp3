@@ -1,0 +1,20 @@
+{
+    "Title": "Exemple de traduction",
+    "Intro": "Bonjour je m'appelle Arthur, j'ai 42 ans.",
+    "Register": "Đăng ký",
+    "Logout":"Đăng xuất",
+    "AddZone":"Thêm Zone",
+    "ListZonePlayAudio":"Danh sách vùng đang phát nhạc",
+    "ListAudio":"Danh sách nhạc",
+    "UpdateUser":"Cập nhật tài khoản",
+    "FirstName":"Họ",
+    "LastName":"Tên đệm",
+    "Password":"Mật khẩu",
+    "Phone":"Số điện thoại",
+    "Company":"Công ty",
+    "SignUp":"Đăng ký",
+    "Login":"Đăng nhập",
+    "ForgotPassword":"Quên mật khẩu ?",
+    "ActivateAccount":"Kích hoạt tài khoản",
+    "Active":"Kích hoạt"
+}

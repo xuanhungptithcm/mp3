@@ -1,0 +1,331 @@
+@import '../../../node_modules/compass-mixins/lib/compass';
+$body-bg: #c1bdba;
+$form-bg: #13232f;
+$white: #ffffff;
+$main: #1ab188;
+$main-light: lighten($main, 5%);
+$main-dark: darken($main, 5%);
+$gray-light: #a0b3b0;
+$gray: #ddd;
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: $body-bg;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $main;
+    transition: .5s ease;
+    &:hover {
+        color: $main-dark;
+    }
+}
+
+.form {
+    background: rgba($form-bg, .9);
+    padding: 40px;
+    width: 100%;
+    margin: 0px auto;
+    border-radius: $br;
+    position: absolute;
+    top: 10%;
+    box-shadow: 0 4px 10px 4px rgba($form-bg, .3);
+}
+
+.tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    li a {
+        display: block;
+        text-decoration: none;
+        padding: 15px;
+        background: rgba($gray-light, .25);
+        color: $gray-light;
+        font-size: 26px;
+        float: left;
+        width: 50%;
+        text-align: center;
+        cursor: pointer;
+        transition: .5s ease;
+        &:hover {
+            background: $main-dark;
+            color: $white;
+        }
+    }
+    .active a {
+        background: $main;
+        color: $white;
+    }
+}
+
+.tab-content>div:last-child {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    color: $white;
+    font-weight: $thin;
+    margin: 0 0 40px;
+    font-size: 30px;
+}
+
+label {
+    position: absolute;
+    transform: translateY(6px);
+    left: 13px;
+    color: rgba($white, .5);
+    transition: all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    font-size: 18px;
+    .req {
+        margin: 2px;
+        color: $main;
+    }
+    font-weight: 300;
+}
+
+label.active {
+    left: 0px;
+    font-size: 14px;
+    .req {
+        opacity: 0;
+    }
+    transform: translateY(37px);
+    -webkit-transform: translateY(37px);
+    -moz-transform: translateY(37px);
+    -ms-transform: translateY(37px);
+    -o-transform: translateY(37px);
+}
+
+label.highlight {
+    color: $white;
+}
+
+input,
+textarea {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 5px;
+    background: none;
+    background-image: none;
+    border: 1px solid $gray-light;
+    color: $white;
+    border-radius: 0;
+    transition: border-color .25s ease, box-shadow .25s ease;
+    &:focus {
+        outline: 0;
+        border-color: $main;
+    }
+}
+
+textarea {
+    border: 2px solid $gray-light;
+    resize: vertical;
+}
+
+.field-wrap {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.top-row {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    >div {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.button {
+    height: 36px;
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 9px 0;
+    font-size: 16px;
+    font-weight: $bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: $main;
+    color: $white;
+    transition: all.5s ease;
+    -webkit-appearance: none;
+    &:hover,
+    &:focus {
+        background: $main-dark;
+    }
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.button-block {
+    display: block;
+    width: 100%;
+}
+
+.forgot {
+    margin-top: -20px;
+    text-align: right;
+}
+
+#login>form>p>a:hover {
+    cursor: pointer;
+    color: #dfe4e3;
+}
+
+button:active {
+    background: #00805d;
+    color: #00805d;
+}
+
+.tab-group {
+    padding: 10px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 375px) {
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    label {
+        font-size: 12px;
+        transform: translateY(2px);
+        left: 5px;
+    }
+    input {
+        font-size: 12px;
+    }
+    .tab-group li a {
+        padding: 8px;
+        font-size: 13px;
+    }
+    label.active {
+        font-size: 12px;
+        transform: translateY(25px);
+        -webkit-transform: translateY(25px);
+        -moz-transform: translateY(25px);
+        -ms-transform: translateY(25px);
+        -o-transform: translateY(25px);
+    }
+    .field-wrap {
+        margin-bottom: 30px;
+    }
+    .tab-group {
+        margin-bottom: 30px;
+    }
+    .button,.button-block{
+        padding: 5px 0;
+        height: 30px;
+    }
+    .forgot{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+    input {
+        font-size: 14px;
+    }
+    .tab-group li a {
+        padding: 10px;
+        font-size: 15px;
+    }
+    label.active {
+        transform: translateY(30px);
+    }
+    .field-wrap{
+        margin-bottom: 27px;
+    }
+    .button-block{
+        padding: 5px 0;
+        height: 30px;
+    }
+    .tab-group{
+        margin-bottom: 20px;
+    }
+    #login > form > div:nth-child(2){
+        margin-bottom: 28px; 
+    }
+    label{
+        font-size: 14px;    
+        left: 5px;
+        transform: translateY(2px);
+    }
+}
+@media only screen and (max-width: 992px) {
+    .tab-group li a{
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width: 900px) and (min-width: 768px) {
+    .col-md-6 {
+        max-width: 58%;
+    }
+    .offset-md-3 {
+        margin-left: 21%;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+    .tab-group{
+        margin-bottom: 20px;
+    }
+    h1{
+        margin-bottom: 20px;
+    }
+
+}
+@media only screen and  (min-width: 992px) {
+    .tab-group > li > a{
+        font-size: 20px;
+    }
+    .col-lg-4{
+       max-width:44%;
+    }
+    .offset-lg-4 {
+        margin-left: 28%;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .form {
+        margin: auto 20px;
+        width: calc(100% - 40px);
+    }
+}

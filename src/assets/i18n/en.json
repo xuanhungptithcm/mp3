@@ -1,0 +1,20 @@
+{
+    "Title": "Translation example",
+    "Intro": "Hello I am Arthur, I am 42 years old.",
+    "Register": "Register",
+    "Logout":"Logout",
+    "AddZone":"Add Zone",
+    "ListZonePlayAudio":"List zone playing audio",
+    "ListAudio":"List audio",
+    "UpdateUser":"Update information user",
+    "FirstName":"First Name",
+    "LastName":"Last Name",
+    "Password":"Set a password",
+    "Phone":"Phone",
+    "Company":"Company",
+    "SignUp":"Sign Up",
+    "Login":"Log in",
+    "ForgotPassword":"Forgot Password ?",
+    "ActivateAccount":"Activate Account",
+    "Active":"Active"
+}

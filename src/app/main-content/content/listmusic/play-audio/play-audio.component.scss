@@ -1,0 +1,114 @@
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 8px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+//seek
+.slider2 {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider2:hover {
+    opacity: 1;
+}
+
+.slider2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 7px;
+    height: 7px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider2::-moz-range-thumb {
+    width: 7px;
+    height: 7px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.seek {
+    display: flex;
+}
+
+.play-audio {
+    display: none;
+}
+
+.hidePlay{
+    top: -28px;
+}
+// .amluong {
+//     position: absolute;
+//     top: 7px;
+// }
+#jp_container_1 > div.jp-type-playlist > div > div.jp-volume-controls.flex-item > div > div > div > div > div.round > i{
+    font-size: 21px;
+    color: #ececec;
+    padding-top: 6px;
+}
+@media only screen and (max-width: 1400px) {
+    .ms_player_close {
+        right: 0;
+    }
+}
+.main-audio{
+    background-image: url(../../../../../assets/images/player_bg.jpg);
+    background-size: cover;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 10000;
+    box-shadow: 0px 0px 24px 6px rgba(4, 4, 4, 0.2);
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+.play-audio{
+    width: 100%;
+}
+// .flex-wrap {
+// 	display: -webkit-box;
+// 	display: -ms-flexbox;
+// 	display: flex;
+// 	-ms-flex-wrap: nowrap;
+// 	flex-wrap: nowrap;
+// 	-webkit-box-align: center;
+// 	-ms-flex-align: center;
+// 	align-items: center
+// }

@@ -1,0 +1,76 @@
+<div class="ms_player_wrapper" [ngClass]="{'close_player': close_Player}">
+  <div class="ms_player_close"  [ngClass]="{'hidePlay': hidePlay}" (click)="closePlayer()">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+  </div>
+  <div class="player_mid">
+    <div class="audio-player">
+      <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+      <div id="jp_container_1" class="jp-audio">
+        <div class="jp-type-playlist">
+          <div class="jp-gui jp-interface flex-wrap" fxLayout="row">
+            <div class="jp-controls flex-item">
+              <button class="jp-previous" tabindex="0" (click)="nextAudio()">
+                <i class="ms_play_control"></i>
+              </button>
+              <button *ngIf="!isPlay" class="jp-play" tabindex="0">
+                <i class="ms_play_control" id="pause"></i>
+              </button>
+              <button *ngIf="isPlay" class="jp-play" tabindex="0">
+                <i class="ms_play_control" style="background-position: 1021px 0px !important;"></i>
+              </button>
+              <button class="jp-next" tabindex="0" (click)="prevAudio()">
+                <i class="ms_play_control"></i>
+              </button>
+            </div>
+            <div class="jp-progress-container flex-item">
+              <div class="jp-time-holder">
+                <span class="jp-current-time"></span>
+                <span class="jp-duration"></span>
+              </div>
+              <div class="jp-progress">
+                <div class="jp-seek-bar">
+                  <div class="jp-play-bar">
+                    <div class="bullet">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="seek">
+                <input class="slider2" id="myRange2" type="range" min="0" max="100" (input)="changeSeek($event)">
+              </div> -->
+            </div>
+            <div class="jp-volume-controls flex-item">
+              <div class="widget knob-container">
+                <div class="knob-wrapper-outer">
+                  <div class="knob-wrapper">
+                    <div class="knob-mask">
+                      <div class="knob d3"><span></span></div>
+                      <div class="handle"></div>
+                      <div class="round">
+                        <i *ngIf="percentage <= 50 && percentage > 0" class="fa fa-volume-down" aria-hidden="true"></i>
+                        <i *ngIf="percentage === 0" class="fa fa-volume-off" aria-hidden="true"></i>
+                        <i *ngIf="percentage > 50" class="fa fa-volume-up" aria-hidden="true"></i>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="amluong">
+              <input class="slider" id="myRange" type="range" min="0" max="100" (input)="changeVolume($event)">
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--main div-->
+</div>
+
+<!-- <div class="play-audio">
+  <audio controls id="play-music" (canplay)="showTime()">
+    <source src="https://vnso-zn-15-tf-mp3-s1-zmp3.zadn.vn/d05dc572c5362c687527/7872688770228947993?authen=exp=1540799273~acl=/d05dc572c5362c687527/*~hmac=97156bbaa5de5165c5b3655735719e0c"            
+    type="audio/mpeg">
+  </audio>
+</div> -->

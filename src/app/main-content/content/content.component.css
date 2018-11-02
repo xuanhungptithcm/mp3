@@ -1,0 +1,14 @@
+.ms_btn {
+  color: #ffffff;
+  cursor: pointer;
+}
+.ms_btn a {
+  color: #ffffff;
+}
+a:not([href]):not([tabindex]) {
+  color: #ffffff;
+}
+.button {
+    height: 40px;
+    padding: 10px 0!important;
+  }

@@ -1,0 +1,31 @@
+.play-audio {
+    left: -140px;
+    position: absolute;
+    z-index: 99999;
+}
+
+@media (max-width: 1400px) {
+    .play-audio {
+        left: -140px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .play-audio {
+        /* margin-right: 50px; */
+    }
+}
+
+@media (max-width: 991px) {
+    .play-audio {
+        left: 0;
+        /* padding: 0px 20px;
+        margin-right: 0px !important; */
+    }
+}
+.ms_divider{
+    margin-top: 15px;
+}
+.ms_weekly_box{
+    cursor: pointer;
+}

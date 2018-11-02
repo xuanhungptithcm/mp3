@@ -1,0 +1,54 @@
+.main {
+  margin-left: 140px;
+  margin-right: 60px;
+  position: relative;
+}
+@keyframes animationTitle {
+  from,
+  11.1%,
+  to {
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.2);
+  }
+  22.2% {
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.9);
+  }
+  33.3% {
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.2);
+  }
+  44.4% {
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.9);
+  }
+  55.5% {
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.2);
+  }
+  66.6% {
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.9);
+  }
+  77.7% {
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.2);
+  }
+  88.8% {
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.9);
+  }
+}
+@media (max-width: 1400px) {
+  .main {
+    margin-left: 140px;
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main {
+    margin-left: 0;
+    padding: 0px 20px;
+    margin-right: 0px !important;
+  }
+}
+

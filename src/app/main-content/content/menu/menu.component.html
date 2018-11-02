@@ -1,0 +1,179 @@
+<div class="ms_sidemenu_wrapper" [ngClass]="{'open_menu': isOpenMenu}">
+  <div class="ms_nav_close" (click)="open_Menu()">
+    <i class="fa fa-angle-right" aria-hidden="true"></i>
+  </div>
+  <div class="ms_sidemenu_inner">
+    <div class="ms_logo_inner">
+      <div class="ms_logo">
+        <a><img src="../../../assets/images/logo.png" alt="" class="img-fluid" /></a>
+        <input class="file1" type="file" (change)="fileChangeEvent($event)">
+        <div class="notify setpos">
+          <span class="heartbit"></span>
+          <span class="point"></span>
+        </div>
+      </div>
+      <div class="ms_logo_open">
+        <a><img src="../../../assets/images/open_logo.png" alt="" class="img-fluid" /></a>
+        <input class="file2" type="file" (change)="fileChangeEvent($event)">
+        <div class="notify setpos">
+          <span class="heartbit"></span>
+          <span class="point"></span>
+        </div>
+      </div>
+    </div>
+    <div class="ms_nav_wrapper">
+      <ul>
+        <li><a [routerLink]='[("./dashboard")]' [ngClass]="{'active': isDashboard}" title="Discover" (click)="changeMenu(1)">
+            <span class="nav_icon">
+              <span class="icon icon_discover"></span>
+            </span>
+            <span class="nav_text">
+              Dashboard
+            </span>
+          </a>
+        </li>
+        <li><a title="Albums" [routerLink]='[("./listmusic")]' [ngClass]="{'active': isListMusic}" (click)="changeMenu(2)">
+            <span class="nav_icon">
+              <span class="icon icon_albums"></span>
+            </span>
+            <span class="nav_text">
+              List mucsic
+            </span>
+          </a>
+        </li>
+        <li><a title="Artists" [routerLink]='[("./manager")]' [ngClass]="{'active': isManagerUser}" (click)="changeMenu(3)">
+            <span class="nav_icon">
+              <i class="fa fa-sitemap size-icon"></i>
+            </span>
+            <span class="nav_text">
+              Manager user
+            </span>
+          </a>
+        </li>
+        <li><a title="Genres" [routerLink]='[("./register")]' [ngClass]="{'active': isUpdateUser}" (click)="changeMenu(4)">
+            <span class="nav_icon">
+              <i class="fa fa-user-circle size-icon " aria-hidden="true"></i>
+            </span>
+            <span class="nav_text">
+              Update User
+            </span>
+          </a>
+        </li>
+        <!-- <li><a title="Top Tracks">
+            <span class="nav_icon">
+              <span class="icon icon_tracks"></span>
+            </span>
+            <span class="nav_text">
+              top tracks
+            </span>
+          </a>
+        </li>
+        <li><a title="Free Music">
+            <span class="nav_icon">
+              <span class="icon icon_music"></span>
+            </span>
+            <span class="nav_text">
+              free music
+            </span>
+          </a>
+        </li>
+        <li><a title="Stations">
+            <span class="nav_icon">
+              <span class="icon icon_station"></span>
+            </span>
+            <span class="nav_text">
+              stations
+            </span>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav_downloads">
+        <li><a title="Downloads">
+            <span class="nav_icon">
+              <span class="icon icon_download"></span>
+            </span>
+            <span class="nav_text">
+              downloads
+            </span>
+          </a>
+        </li>
+        <li><a title="Purchased">
+            <span class="nav_icon">
+              <span class="icon icon_purchased"></span>
+            </span>
+            <span class="nav_text">
+              purchased
+            </span>
+          </a>
+        </li>
+        <li><a title="Favourites">
+            <span class="nav_icon">
+              <span class="icon icon_favourite"></span>
+            </span>
+            <span class="nav_text">
+              favourites
+            </span>
+          </a>
+        </li>
+        <li><a title="History">
+            <span class="nav_icon">
+              <span class="icon icon_history"></span>
+            </span>
+            <span class="nav_text">
+              history
+            </span>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav_playlist">
+        <li><a title="Featured Playlist">
+            <span class="nav_icon">
+              <span class="icon icon_fe_playlist"></span>
+            </span>
+            <span class="nav_text">
+              featured playlist
+            </span>
+          </a>
+        </li>
+        <li><a title="Create Playlist">
+            <span class="nav_icon">
+              <span class="icon icon_c_playlist"></span>
+            </span>
+            <span class="nav_text">
+              create playlist
+            </span>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</div>
+<!---Header--->
+<div class="ms_header">
+  <div class="ms_top_left">
+    <div class="ms_top_search">
+      <input type="text" (keyup)="searchAudio($event)" class="form-control" placeholder="Search Music Here..">
+      <span class="search_icon">
+        <img src="../../assets/images/svg/search.svg" alt="">
+      </span>
+    </div>
+    <div class="ms_top_trend">
+      <!-- <span><a href="index.html#" class="ms_color">Trending Songs :</a></span> <span class="top_marquee"><a href="index.html#">Dream
+          your moments, Until I Met You, Gimme Some Courage, Dark Alley (+8 More)</a></span> -->
+    </div>
+  </div>
+  <div class="ms_top_right">
+    <div class="ms_top_lang">
+      <span>Xin chào: Admin</span>
+    </div>
+    <div class="ms_top_lang2 language">
+      <span>Language: </span>
+      <span (click)="switchLanguage('en')">US</span>
+      <span (click)="switchLanguage('vn')">VN</span>
+    </div>
+    <div class="ms_top_btn">
+      <a class="ms_btn reg_btn" [routerLink]='(["./register"])'><span translate>Register</span></a>
+      <a class="ms_btn login_btn" (click)="logout()"><span translate>Logout</span></a>
+    </div>
+  </div>
+</div> 

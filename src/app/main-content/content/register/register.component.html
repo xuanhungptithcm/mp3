@@ -1,0 +1,82 @@
+<div class="content">
+  <div class="fix-lex col-xs-10 col-sm-10 col-md-6 col-lg-4">
+    <div class="row">
+      <div class="form">
+        <div class="tab-content">
+          <div id="signup">
+            <h1 *ngIf="isAdmin">Tạo tài khoản người dùng</h1>
+            <h1 *ngIf="isUpdate">Cập nhật tài khoản</h1>
+            <form *ngIf="isAdmin">
+              <div class="top-row">
+                <div class="field-wrap">
+                  <label [ngClass]="{active: firstName.value, highlight: firstName.value}">
+                    First Name
+                    <span class="req">*</span>
+                  </label>
+                  <input type="text" [formControl]="firstName" required autocomplete="off" />
+                </div>
+
+                <div class="field-wrap">
+                  <label [ngClass]="{active: lastName.value, highlight: lastName.value}">
+                    Last Name
+                    <span class="req">*</span>
+                  </label>
+                  <input type="text" [formControl]="lastName" required autocomplete="off" />
+                </div>
+              </div>
+              <div class="field-wrap">
+                <label [ngClass]="{active: email.value, highlight: email.value}">
+                  Email Address
+                  <span class="req">*</span>
+                </label>
+                <input type="email" [formControl]="email" required autocomplete="off" />
+              </div>
+              <div class="field-wrap">
+                <label [ngClass]="{active: password.value, highlight: password.value}">
+                  Set A Password
+                  <span class="req">*</span>
+                </label>
+                <input type="password" [formControl]="password" required autocomplete="off" />
+              </div>
+              <button type="submit" class="button button-block">Register</button>
+            </form>
+            <form *ngIf="isUpdate">
+              <div class="top-row">
+                <div class="field-wrap">
+                  <label [ngClass]="{active: firstName.value, highlight: firstName.value}">
+                    First Name
+                    <span class="req">*</span>
+                  </label>
+                  <input type="text" [formControl]="firstName" required autocomplete="off" />
+                </div>
+
+                <div class="field-wrap">
+                  <label [ngClass]="{active: lastName.value, highlight: lastName.value}">
+                    Last Name
+                    <span class="req">*</span>
+                  </label>
+                  <input type="text" [formControl]="lastName" required autocomplete="off" />
+                </div>
+              </div>
+              <div class="field-wrap">
+                <label [ngClass]="{active: email.value, highlight: email.value}">
+                  Email Address
+                  <span class="req">*</span>
+                </label>
+                <input type="email" [formControl]="email" required autocomplete="off" />
+              </div>
+              <div class="field-wrap">
+                <label [ngClass]="{active: password.value, highlight: password.value}">
+                  Set A Password
+                  <span class="req">*</span>
+                </label>
+                <input type="password" [formControl]="password" required autocomplete="off" />
+              </div>
+              <button type="submit" class="button button-block">Update</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
