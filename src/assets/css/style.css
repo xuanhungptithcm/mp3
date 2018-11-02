@@ -704,13 +704,13 @@ span.nav_text {
 	position: relative;
 	display: flex;
 	display: inline-block;
-	width: 100%;
+	/* width: 100%; */
 	float: left;
 }
 .search_icon {
-	position: absolute;
+	/* position: absolute;
 	right: 0;
-	top: 0;
+	top: 0; */
 	height: 40px;
 	line-height: 40px;
 	background-color: #3bc8e7;
@@ -5896,6 +5896,7 @@ h2.widget-title:after {
 	}
 	.ms_header {
 		padding: 10px 30px 6px;
+		padding-left: 15px;
 	}
 	.ms_top_search {
 		max-width: 33%;

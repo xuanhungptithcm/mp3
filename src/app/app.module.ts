@@ -31,8 +31,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 // debug in Xampp
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-// Flex module
-import { FlexLayoutModule } from '@angular/flex-layout';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -59,7 +57,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     ToastModule.forRoot(),
     BrowserAnimationsModule,
     HttpClientModule,
-    FlexLayoutModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
