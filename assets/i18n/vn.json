@@ -16,5 +16,9 @@
     "Login":"Đăng nhập",
     "ForgotPassword":"Quên mật khẩu ?",
     "ActivateAccount":"Kích hoạt tài khoản",
-    "Active":"Kích hoạt"
+    "Active":"Kích hoạt",
+    "EmailAddress":"Địa chi email",
+    "WelcomeBack":"Chào mừng bạn trở lại!",
+    "SignUpforFree":"Đăng kí miễn phí",
+    "Request":"Xác nhận"
 }
