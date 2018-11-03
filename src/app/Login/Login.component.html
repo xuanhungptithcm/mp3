@@ -2,7 +2,19 @@
 height: 100vh;">
   <div class="row">
     <div class="form">
-
+        <div class="timepicker col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="timepicker-picker">
+                <div class="nhiemvu">
+                    <select required (change)="changedNhiemVu($event)">
+                        <option value="" hidden>Language</option>
+                        <option *ngIf="isLanguage === 'vn'" selected value="vn">Tiếng Việt</option>
+                        <option *ngIf="isLanguage === 'en'" selected value="en">English</option>
+                        <option *ngIf="isLanguage !== 'vn'" value="vn">Tiếng Việt</option>
+                        <option *ngIf="isLanguage !== 'en'" value="en">English</option>
+                    </select>
+                </div>
+            </div>
+        </div>
       <ul class="tab-group">
         <li class="tab" [ngClass]="{active: isSignUpForm && isAdmin}" (click)="changeForm('signup')">
           <a *ngIf="isAdmin" translate>SignUp</a>
@@ -14,7 +26,7 @@ height: 100vh;">
 
       <div class="tab-content">
         <div id="signup" [ngStyle]="{'display': isSignUpForm === true && isAdmin  ? 'block' : 'none'}">
-          <h1>Sign Up for Free</h1>
+          <h1 translate>SignUpforFree</h1>
           <form (ngSubmit)="register()">
             <div class="top-row">
               <div class="field-wrap">
@@ -68,11 +80,11 @@ height: 100vh;">
           </form>
         </div>
         <div id="login" [ngStyle]="{'display': isLoginForm === true ? 'block' : 'none'}">
-          <h1>Welcome Back!</h1>
+          <h1 translate>WelcomeBack</h1>
           <form (ngSubmit)="login()">
             <div class="field-wrap">
-              <label [ngClass]="{active: email.value, highlight: email.value}">
-                Email Address
+              <label translate [ngClass]="{active: email.value, highlight: email.value}">
+                EmailAddress
                 <span class="req">*</span>
               </label>
               <input [formControl]="email" type="email" required autocomplete="off" />
@@ -98,16 +110,16 @@ height: 100vh;">
 
 
         <div id="login" [ngStyle]="{'display': isForgot && isAdmin === true ? 'block' : 'none'}">
-          <h1>Forgot Password</h1>
+          <h1 translate>ForgotPassword</h1>
           <form (ngSubmit)="forgot_Password()">
             <div class="field-wrap">
-              <label [ngClass]="{active: email.value, highlight: email.value}">
-                Email Address
+              <label translate [ngClass]="{active: email.value, highlight: email.value}">
+                  EmailAddress
                 <span class="req">*</span>
               </label>
               <input [formControl]="email" type="email" required autocomplete="off" />
             </div>
-            <button class="button button-block">Request</button>
+            <button class="button button-block" translate>Request</button>
           </form>
         </div>
 

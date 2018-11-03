@@ -167,9 +167,22 @@
       <span>Xin chào: Admin</span>
     </div>
     <div class="ms_top_lang2 language">
-      <span>Language: </span>
+      <!-- <span>Language: </span>
       <span (click)="switchLanguage('en')">US</span>
-      <span (click)="switchLanguage('vn')">VN</span>
+      <span (click)="switchLanguage('vn')">VN</span> -->
+      <div class="timepicker col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="timepicker-picker">
+              <div class="nhiemvu">
+                  <select required (change)="changedNhiemVu($event)">
+                      <option value="" hidden>Language</option>
+                      <option *ngIf="isLanguage === 'vn'" selected value="vn">Tiếng Việt</option>
+                      <option *ngIf="isLanguage === 'en'" selected value="en">English</option>
+                      <option *ngIf="isLanguage !== 'vn'" value="vn">Tiếng Việt</option>
+                      <option *ngIf="isLanguage !== 'en'" value="en">English</option>
+                  </select>
+              </div>
+          </div>
+      </div>
     </div>
     <div class="ms_top_btn">
       <a class="ms_btn reg_btn" [routerLink]='(["./register"])'><span translate>Register</span></a>

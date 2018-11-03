@@ -3,9 +3,11 @@ p {
   color: aqua;
   animation: animationTitle 5s infinite;
   margin-bottom: 20px;
+  -webkit-animation: animationTitle 5s infinite;
+  display: -webkit-inline-box;
 }
 .padder_top80 {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .w_top_song .w_tp_song_img {
   width: 320px;
@@ -14,10 +16,14 @@ p {
   display: flex;
 }
 .listVung {
-  height: calc(100vh - 114px);
+  height: calc(100vh - 154px);
   overflow: auto;
   display: flex;
   flex-wrap: wrap;
+  align-content: baseline;
+}
+.listVung::-webkit-scrollbar { 
+  display: none; 
 }
 .modal-body{
   text-align: center;
@@ -36,15 +42,15 @@ p {
 }
 @media (max-width: 991px) {
   .addHouse {
-    top: 62px;
+    top: 75px;
     right: 20px;
   }
 }
-@media (min-width:992px) and (max-width:1120px){
+/* @media (min-width:992px) and (max-width:1120px){
   .col-lg-4 {
     max-width: 42.333333%;
 }
-}
+} */
 @media (max-width: 600px) {
   p{
     font-size: 20px;
@@ -60,4 +66,11 @@ p {
   justify-content: center;
   align-items: center;
  }
+}
+@media only screen and (min-width:992px) and (max-width: 1288px)
+{
+  .col-lg-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
 }

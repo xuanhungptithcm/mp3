@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   isAdmin: Boolean = true;
   isForgot: Boolean = false;
   isActive: Boolean = false;
+  isLanguage: String = 'vn';
   constructor(private route: Router,
     private authenService: AuthenticationService,
     private toastr: ToastsManager,
@@ -30,7 +31,13 @@ export class LoginComponent implements OnInit {
     private translate: TranslateService
   ) {
     this.toastr.setRootViewContainerRef(vcr);
-    translate.setDefaultLang('vn');
+    if (localStorage.getItem('language') === 'vn') {
+      translate.setDefaultLang('vn');
+      this.isLanguage = 'vn';
+    } else {
+      translate.setDefaultLang('en');
+      this.isLanguage = 'en';
+    }
   }
 
   ngOnInit() {
@@ -141,5 +148,16 @@ export class LoginComponent implements OnInit {
         this.resetForm();
       }
     });
+  }
+  switchLanguage(language: string) {
+    this.translate.use(language);
+  }
+  changedNhiemVu(value) {
+    if (value.target.value !== '') {
+      console.log('oke');
+      this.switchLanguage(value.target.value);
+      localStorage.setItem('language', value.target.value);
+      this.isLanguage = value.target.value;
+    }
   }
 }

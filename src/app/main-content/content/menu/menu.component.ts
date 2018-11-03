@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
   isOpenMenu = false;
@@ -17,13 +17,21 @@ export class MenuComponent implements OnInit {
     private searchBehavior: SearchBehaviorService,
     private translate: TranslateService
     ) {
-    translate.setDefaultLang('vn');
+    if (localStorage.getItem('language') === 'vn') {
+      translate.setDefaultLang('vn');
+      this.isLanguage = 'vn';
+    } else {
+      translate.setDefaultLang('en');
+      this.isLanguage = 'en';
+    }
+
   }
 
   isDashboard: Boolean = false;
   isListMusic: Boolean = false;
   isManagerUser: Boolean = false;
   isUpdateUser: Boolean = false;
+  isLanguage: String = 'vn';
   url: any;
   ngOnInit() {
     this.url = this.route.url;
@@ -97,5 +105,13 @@ export class MenuComponent implements OnInit {
   }
   switchLanguage(language: string) {
     this.translate.use(language);
+  }
+  changedNhiemVu(value) {
+    if (value.target.value !== '') {
+      console.log('oke');
+      this.switchLanguage(value.target.value);
+      localStorage.setItem('language', value.target.value);
+      this.isLanguage = value.target.value;
+    }
   }
 }

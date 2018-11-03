@@ -1,11 +1,20 @@
 div.ms_nav_wrapper ul > li {
   cursor: pointer;
 }
-
+$demo-blue: #005BA6;
+$demo-gray: #D6D6D6;
+$demo-placeholder: #C7C7C7;
+$demo-border: #E6E6E6;
+$border-width: 2px;
+$baseColor: #337ab7;
 @keyframes animationCloseMenu {
   0% {
     transform: rotate(-5deg);
-  }
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+}
   10% {
     transform: rotate(5deg);
   }
@@ -156,8 +165,14 @@ a:not([href]):not([tabindex]) {
   cursor: pointer;
   margin-right: 5px;
   display: -webkit-box;
-	display: -ms-flexbox;
+  display: -ms-flexbox;
   display: flex;
+  margin-top: -9px;
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -ms-border-radius:10px;
+  -o-border-radius:10px;
 }
 div.ms_header > div.ms_top_right > div.ms_top_lang2.language > span:nth-child(2){
   margin-right: 5px;
@@ -193,7 +208,6 @@ div.ms_header > div.ms_top_right > div.ms_top_lang2.language > span:nth-child(3)
   display: flex;
 }
 .ms_top_search input{
-  width: 50px;
   border-top-right-radius: 0px;
   transition: 0.3s;
   border-bottom-right-radius: 0px;
@@ -214,21 +228,65 @@ div.ms_header > div.ms_top_right > div.ms_top_lang2.language > span:nth-child(3)
   .ms_nav_close{
     right: -5px;
   }
+  .ms_top_search input{
+    width: 70px;
+  }
   .ms_top_search input:focus{
     width: 90px;
   }
-}
-@media (max-width: 480px)
-{
   div.ms_header > div.ms_top_right > div.ms_top_lang2.language > span:nth-child(1){
     display: none;
   }
 }
+
 @media (max-width: 991px)
 {
   .language {
     float: left;
     position: relative;
-    top: 8px;
+    top: 2px;
+  }
+  .ms_top_search input{
+    width: 200px;
+  }
+  .ms_top_search input:focus{
+    width: 400px;
+  }
 }
+@media (min-width: 991px){
+  .ms_top_search input{
+    width: 300px;
+  }
+  .ms_top_search input:focus{
+    width: 500px;
+  }
+}
+.nhiemvu {
+  color: $demo-blue;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 16px;
+  margin-top: 9px;
+  margin-bottom: 15px;
+  width: 100%;
+  select {
+      font-size: 15px;
+      width: 100%;
+      border: $border-width solid $baseColor;
+      border-radius: 2px;
+      font-weight: 400;
+      color: inherit;
+      padding:3px;
+      line-height: normal;
+      transition: border-color 0.2s ease, outline 0.2s ease;
+      &[disabled],
+      &:disabled {
+          opacity: 0.4;
+          cursor: not-allowed;
+      }
+      &:invalid {
+          color: inherit;
+      }
+  }
 }

@@ -1214,7 +1214,7 @@ ul.more_option li a:hover .opt_icon .icon_share {
 }
 /*====Weekly Top 15 Music =====*/
 .ms_weekly_wrapper {
-	padding-top: 0px;
+	padding-top: 10px;
 }
 .ms_weekly_wrapper .ms_heading {
 	margin-bottom: 10px;
@@ -4496,7 +4496,7 @@ h2.widget-title:after {
 		font-size: 13px;
 	}
 	.ms_header {
-		padding: 20px 30px;
+		padding: 10px 30px;
 	}
 	.ms_top_right .ms_top_lang {
 		padding-right: 5px;
