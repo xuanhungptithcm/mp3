@@ -4,7 +4,7 @@
     "Register": "Đăng ký",
     "Logout":"Đăng xuất",
     "AddZone":"Thêm Zone",
-    "ListZonePlayAudio":"Danh sách vùng đang phát nhạc",
+    "ListZonePlayAudio":"Danh sách Zone",
     "ListAudio":"Danh sách nhạc",
     "UpdateUser":"Cập nhật tài khoản",
     "FirstName":"Họ",
@@ -20,5 +20,7 @@
     "EmailAddress":"Địa chi email",
     "WelcomeBack":"Chào mừng bạn trở lại!",
     "SignUpforFree":"Đăng kí miễn phí",
-    "Request":"Xác nhận"
+    "Request":"Xác nhận",
+    "Hello":"Xin chào: {{name}}",
+    "Update":"Cập nhật"
 }

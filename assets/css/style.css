@@ -5122,11 +5122,11 @@ h2.widget-title:after {
 		bottom: 175%;
 	}
 	.ms_top_search .form-control {
-		height: 30px;
+		height: 33px;
 		line-height: 47px;
 	}
 	span.search_icon {
-		height: 30px;
+		height: 33px;
 		line-height: 32px;
 	}
 	.ms_header {
@@ -5148,6 +5148,9 @@ h2.widget-title:after {
 	.ms_register_form {
 		width: calc(100% - 50%);
 		padding-left: 30px;
+	}
+	#typesearch{
+		min-height: 33px;
 	}
 	/* .ms_register_popup .modal-content {
 		padding: 55px 30px;
@@ -5172,11 +5175,11 @@ h2.widget-title:after {
 		padding: 0px 10px;
 	}
 	.ms_header {
-		padding: 10px 30px 10px;
+		padding: 10px 5px 10px;
 	}
 	.ms_top_right {
 		line-height: 1;
-		padding-right: 50px;
+		padding-right: 23px;
 	}
 	.ms_album_single_wrapper .album_inner_list {
 		width: 100%;
@@ -5357,7 +5360,7 @@ h2.widget-title:after {
 		height: auto;
 		line-height: 1;
 		position: fixed;
-		right: 20px;
+		right: -7px;
 		top: 25px;
 		background-color: transparent;
 		transform: none;

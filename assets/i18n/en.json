@@ -4,7 +4,7 @@
     "Register": "Register",
     "Logout":"Logout",
     "AddZone":"Add Zone",
-    "ListZonePlayAudio":"List zone playing audio",
+    "ListZonePlayAudio":"List zone",
     "ListAudio":"List audio",
     "UpdateUser":"Update information user",
     "FirstName":"First Name",
@@ -17,5 +17,10 @@
     "ForgotPassword":"Forgot Password ?",
     "ActivateAccount":"Activate Account",
     "Active":"Active",
-    "SignUpforFree":"Sign Up for Free"
+    "SignUpforFree":"Sign Up for Free",
+    "Hello":"Hello: {{name}}",
+    "Request":"Request",
+    "WelcomeBack":"Welcome Back",
+    "EmailAddress":"Email Address",
+    "Update":"Update"
 }
